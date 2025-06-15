@@ -1,0 +1,37 @@
+resources:
+  jobs:
+    Bronze_To_Silver_ETL:
+      name: Bronze To Silver ETL
+      tasks:
+        - task_key: Data_Standardization
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints
+              Project/Bronze_To_Silver/02_Silver_Layer_Data_Processing
+            source: WORKSPACE
+        - task_key: Businees_Rule_Implementation
+          depends_on:
+            - task_key: Data_Standardization
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints
+              Project/Bronze_To_Silver/02_Silver_Layer_Business_Rule_Implementation
+            source: WORKSPACE
+        - task_key: Data_Quality_And_Validation_Checks
+          depends_on:
+            - task_key: Businees_Rule_Implementation
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints
+              Project/Bronze_To_Silver/02_Silver_Data_Quality_Validation
+            source: WORKSPACE
+        - task_key: Data_Profiling
+          depends_on:
+            - task_key: Businees_Rule_Implementation
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints Project/Bronze_To_Silver/02_Silver_Data_Profiling
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED

@@ -1,0 +1,20 @@
+resources:
+  jobs:
+    Consumer_Complaints_End_To_End_Job:
+      name: Consumer Complaints End To End Job
+      tasks:
+        - task_key: Bronze_Layer
+          run_job_task:
+            job_id: 1059644080432356
+        - task_key: Silver_Layer
+          depends_on:
+            - task_key: Bronze_Layer
+          run_job_task:
+            job_id: 641227334152647
+        - task_key: Gold_Layer
+          depends_on:
+            - task_key: Silver_Layer
+          run_job_task:
+            job_id: 257107373233876
+      queue:
+        enabled: true

@@ -1,0 +1,50 @@
+resources:
+  jobs:
+    Silver_To_Gold_Data_Modeling:
+      name: Silver To Gold Data Modeling
+      tasks:
+        - task_key: Load_Company_Dimension_Table
+          sql_task:
+            query:
+              query_id: e7fc115e-fd84-4440-a9ee-c0e40d4b3269
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Company_Response_Dimension_Table
+          sql_task:
+            query:
+              query_id: 87f9c1b3-4538-4122-938e-cc663e4aaf7a
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Date_Dimension_Table
+          sql_task:
+            query:
+              query_id: 202af06b-d97b-4872-b909-0962fb46afc5
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Demographic_Dimension_Table
+          sql_task:
+            query:
+              query_id: fb589b6e-106e-4130-aaf3-3fcb24e45ba0
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Issue_Dimension_Table
+          sql_task:
+            query:
+              query_id: 2e2416e3-6c63-45f6-b0cb-9af168476e04
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Product_Dimension_Table
+          sql_task:
+            query:
+              query_id: 78c0ef0a-69e2-4409-af3e-ec6f8c620922
+            warehouse_id: ef484f6af7828e4f
+        - task_key: Load_Complaints_Fact_Table
+          depends_on:
+            - task_key: Load_Demographic_Dimension_Table
+            - task_key: Load_Issue_Dimension_Table
+            - task_key: Load_Company_Dimension_Table
+            - task_key: Load_Product_Dimension_Table
+            - task_key: Load_Company_Response_Dimension_Table
+            - task_key: Load_Date_Dimension_Table
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints Project/Silver_To_Gold/03_Gold_Fact_Complaint
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: STANDARD

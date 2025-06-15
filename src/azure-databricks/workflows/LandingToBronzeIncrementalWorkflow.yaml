@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    Landing_To_Bronze_Incremental_Load:
+      name: Landing To Bronze Incremental Load
+      tasks:
+        - task_key: Bronze_AutoLoader
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints
+              Project/Landing_To_Bronze/01_Landing_To_Bronze_Auto_Loader
+            source: WORKSPACE
+        - task_key: Bronze_DataValidation
+          depends_on:
+            - task_key: Bronze_AutoLoader
+          notebook_task:
+            notebook_path: /Workspace/Users/sairohituddagiri@gmail.com/Databricks Consumer
+              Complaints
+              Project/Landing_To_Bronze/01_Landing_To_Bronze_Data_Validation
+            source: WORKSPACE
+      queue:
+        enabled: true
