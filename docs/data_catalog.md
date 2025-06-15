@@ -233,5 +233,4 @@ The Gold layer implements a dimensional data model (star schema) optimized for a
 ---
 
 *Last Updated: [06-15-2025]*  
-*Version: 1.0*  
-*Next Review Date: [Date + 3 months]*
+*Version: 1.0* 
