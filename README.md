@@ -8,7 +8,7 @@
 
 ## 🏗️ Project Overview
 
-This project demonstrates a comprehensive **end-to-end data engineering solution** for processing Consumer Financial Protection Bureau (CFPB) complaint data using **Azure Databricks** and implementing a **Medallion Architecture**. The solution showcases modern data engineering practices including incremental data processing, dimensional modeling, and automated data governance.
+This project demonstrates a comprehensive **end-to-end data engineering solution** for processing Consumer Financial Protection Bureau (CFPB) complaint data using **Azure Databricks** and implementing a **Medallion Architecture**. The solution showcases modern data engineering practices including incremental data processing, dimensional modeling, and automated data governance.The details about this data can be found here [link](https://cfpb.github.io/api/ccdb/fields.html)
 
 ### 🎯 Business Problem
 Financial institutions need to analyze consumer complaint patterns to:
@@ -70,13 +70,13 @@ This project implements a **medallion architecture** (Bronze → Silver → Gold
 
 ### Dimension Tables
 - **`dim_company`**: Company information 
-- - **`dim_company_response`**: Company respone to complaints
+- **`dim_company_response`**: Company respone to complaints
 - **`dim_product_category`**: Financial product categories and subcategories  
 - **`dim_issue_categroy`**: Complaint issues and sub-issues with severity classification
 - **`dim_demographic`**: Geographic data (state, region, ZIP code level)
 - **`dim_date`**: Time dimension for temporal analysis
 
-📋 **[View Complete Data Catalog](./docs/data-catalog.md)**
+📋 **[View Complete Data Catalog](docs/data_catalog.md)**
 
 ---
 
@@ -312,7 +312,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 **Rohit Uddagiri**
 - GitHub: [@Rohituddagiri](https://github.com/Rohituddagiri)
-- LinkedIn: [rohit-uddagiri](https://linkedin.com/in/rohit-uddagiri)
+- LinkedIn: [rohit-uddagiri](https://www.linkedin.com/in/sairohituddagiri/)
 
 ---
 
