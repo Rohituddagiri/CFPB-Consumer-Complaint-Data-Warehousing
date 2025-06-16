@@ -184,7 +184,8 @@ The data warehouse enables analysis of:
 
 ## 📁 Repository Structure
 
-```docs/
+```
+docs/
     ├── .DS_Store
     ├── data_catalog.md
     ├── data_lineage.png
@@ -282,36 +283,6 @@ src/
     └── .gitignore
 .DS_Store
 README.md
-```
-
-
-
-
-```
-CFPB-Consumer-Complaint-Data-Warehousing/
-├── 📊 notebooks/
-│   ├── bronze/                    # Bronze layer processing
-│   ├── silver/                    # Silver layer transformations  
-│   ├── gold/                      # Gold layer dimensional modeling
-│   └── exploration/               # Data exploration notebooks
-├── 🗃️ src/
-│   ├── bronze/                    # Bronze layer utilities
-│   ├── silver/                    # Silver layer transformations
-│   ├── gold/                      # Gold layer star schema
-│   └── common/                    # Shared utilities
-├── 🔧 config/
-│   ├── databricks/               # Cluster and job configurations
-│   └── unity-catalog/            # Governance setup
-├── 📋 docs/
-│   ├── architecture/             # Architecture documentation
-│   ├── data-catalog.md           # Data dictionary
-│   └── setup-guide.md            # Setup instructions
-├── 🧪 tests/
-│   ├── unit/                     # Unit tests
-│   └── integration/              # Integration tests
-└── 📄 sql/
-    ├── ddl/                      # Table creation scripts
-    └── queries/                  # Sample analytical queries
 ```
 
 ---
