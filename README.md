@@ -184,6 +184,109 @@ The data warehouse enables analysis of:
 
 ## 📁 Repository Structure
 
+```docs/
+    ├── .DS_Store
+    ├── data_catalog.md
+    ├── data_lineage.png
+    ├── data_warehouse_design.drawio
+    ├── data_warehouse_design.png
+    ├── dimensional_model_ERD.png
+    └── README.md
+src/
+    ├── azure-data-lake-storage-gen2/
+        ├── bronze/
+            ├── audit_complaints/
+                └── README.md
+            ├── checkpoint_complaints/
+                └── README.md
+            ├── complaints/
+                └── part-00000-4b4cb688-a046-4a38-955d-e8b29fecea42.c000.snappy.parquet
+            └── README.md
+        ├── gold/
+            ├── dim_company/
+                └── README.md
+            ├── dim_company_response/
+                └── README.md
+            ├── dim_date/
+                └── README.md
+            ├── dim_demographic/
+                └── README.md
+            ├── dim_issue_category/
+                └── README.md
+            ├── dim_product_category/
+                └── README.md
+            └── fact_complaint/
+                └── README.md
+        ├── landing/
+            ├── data/
+                ├── complaints_2024-07-17.csv
+                ├── complaints_2024-07-19.csv
+                ├── complaints_2024-07-21.csv
+                ├── complaints_2024-07-24.csv
+                ├── complaints_2024-08-10.csv
+                ├── complaints_2024-08-11.csv
+                ├── complaints_2024-08-12.csv
+            ├── .DS_Store
+            └── README.md
+        ├── silver/
+            ├── br_compalint/
+                └── README.md
+            ├── checkpoint_br_complaint/
+                └── README.md
+            ├── checkpoint_processed_complaints/
+                └── README.md
+            ├── processed_complaint/
+                └── README.md
+            └── qurantine_complaint/
+                └── README.md
+        └── .DS_Store
+    ├── azure-databricks/
+        ├── Bronze_To_Silver/
+            ├── 02_Silver_Create_Complaints_Table_DDL.dbquery.ipynb
+            ├── 02_Silver_Data_Profiling.ipynb
+            ├── 02_Silver_Data_Quality_Validation.ipynb
+            ├── 02_Silver_Layer_Business_Rule_Implementation.ipynb
+            ├── 02_Silver_Layer_Data_Processing.ipynb
+            ├── Data_Profile.png
+            └── Data_Quality_Validation.png
+        ├── Landing_To_Bronze/
+            ├── 01_Landing_To_Bronze_Auto_Loader.ipynb
+            └── 01_Landing_To_Bronze_Data_Validation.ipynb
+        ├── Silver_To_Gold/
+            ├── 03_dim_company_response_sql.dbquery.ipynb
+            ├── 03_dim_company_sql.dbquery.ipynb
+            ├── 03_dim_date_sql.dbquery.ipynb
+            ├── 03_dim_demographic_sql.dbquery.ipynb
+            ├── 03_dim_issue_category_sql.dbquery.ipynb
+            ├── 03_dim_product_category_sql.dbquery.ipynb
+            ├── 03_Gold_Dimensional_Model_DDLs.dbquery.ipynb
+            └── 03_Gold_Fact_Complaint.ipynb
+        ├── workflows/
+            ├── .DS_Store
+            ├── .gitignore
+            ├── BronzeToSilverETL.png
+            ├── BronzeToSilverETL.yaml
+            ├── ConsumerComplaintsEndtoEnd.png
+            ├── ConsumerComplaintsEndToEndJob.yaml
+            ├── LandingToBronzeIncremental.png
+            ├── LandingToBronzeIncrementalWorkflow.yaml
+            ├── SilverToGoldDataModeling.png
+            └── SilverToGoldDataModeling.yaml
+        └── .DS_Store
+    ├── azure-resource-group/
+        ├── ExportedTemplate-my-azure-resource-group/
+            ├── parameters.json
+            └── template.json
+        └── README.md
+    ├── .DS_Store
+    └── .gitignore
+.DS_Store
+README.md
+```
+
+
+
+
 ```
 CFPB-Consumer-Complaint-Data-Warehousing/
 ├── 📊 notebooks/
