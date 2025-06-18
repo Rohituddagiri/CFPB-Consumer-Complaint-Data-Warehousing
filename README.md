@@ -382,11 +382,11 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ---
 
-## 👤 Author
+## 🧑‍💻 Author
 
-**Rohit Uddagiri**
-- GitHub: [@Rohituddagiri](https://github.com/Rohituddagiri)
-- LinkedIn: [rohit-uddagiri](https://www.linkedin.com/in/sairohituddagiri/)
+**Sai Rohit Uddagiri**  
+Data Engineer & AI Agent Developer  
+[LinkedIn](https://www.linkedin.com/in/sairohituddagiri/) | [GitHub](https://github.com/Rohituddagiri)
 
 ---
 
